@@ -492,6 +492,7 @@
       </div>
   
       <form
+        id="contact-form"
         action="https://formspree.io/f/mldeavew"
         method="POST"
         class="w-full max-w-lg mx-auto"
@@ -679,5 +680,60 @@
     <!-- footer end -->
 
     <script src="dist/js/script.js"></script>
+    <script>
+        // Seleksi semua tautan yang mengarah ke ID (#)
+        const links = document.querySelectorAll('a[href^="#"]');
+      
+        // Tambahkan event listener untuk setiap tautan
+        links.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault(); // Mencegah perilaku default (pindah langsung)
+      
+            const targetId = this.getAttribute('href'); // Ambil nilai href
+            const targetElement = document.querySelector(targetId); // Seleksi elemen tujuan
+      
+            // Scroll ke elemen tujuan dengan smooth behavior
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          });
+        });
+      </script>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault(); // Mencegah form dikirim secara default
+  
+      // Ambil form data
+      const formData = new FormData(this);
+  
+      // Kirim form data menggunakan Fetch API
+      fetch(this.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept": "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Jika form berhasil dikirim, tampilkan pesan sukses
+            alert("Pesan berhasil dikirim! Terima kasih.");
+            // Kosongkan form setelah pengiriman
+            document.getElementById("contact-form").reset();
+          } else {
+            // Jika ada error, tampilkan pesan error
+            alert("Terjadi kesalahan. Silakan coba lagi.");
+          }
+        })
+        .catch((error) => {
+          // Jika ada masalah dengan Fetch API
+          alert("Terjadi kesalahan. Silakan coba lagi.");
+        });
+    });
+  </script>
+  
+      
   </body>
 </html>
