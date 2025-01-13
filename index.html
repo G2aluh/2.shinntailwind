@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/output.css" />
+    <style>
+      /* Pastikan tidak ada overflow horizontal */
+      html,
+      body {
+        margin: 0;
+        margin-top: -1.4rem;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      /* Untuk gambar */
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0rem;
+        margin-top: 4rem;
+      }
+
+      .gambar {
+        border-radius: 0.5rem;
+      }
+
+      /* Pastikan kontainer tidak melebar */
+      .container {
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Atur responsivitas untuk elemen */
+      .relative {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="#home" class="font-bold text-lg text-primary block py-6"
+              >2.Shinnra</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-2 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    >Beranda</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    >Tentang Saya</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portofolio"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    >Portofolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#ubig"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    >Ubig Momen</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    >Hubungi Saya</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-36">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full text-tengah self-center px-4 lg:-mt-6 lg:w-1/2">
+            <h1 class="text-base font-semibold text-primary md:text-xl">
+              Halo semuanya 🙌, saya
+              <span class="block font-bold text-dark text-4xl mt-7 lg:text-5xl"
+                >Galuh Saputra</span
+              >
+            </h1>
+            <h2
+              class="font-light ml-1 text-dark text-lg mb-12 lg:text-2xl mt-0"
+            >
+              SMK Brantas Karangkates
+            </h2>
+            <!-- <p class="text-secondary ml-1 font-medium mb-10 leading-relaxed lg:mt-1 ">Belajar tailwind sangat menyenangkan <span class="text-dark font-bold"> sekali!</span></p> -->
+
+            <a
+              href="https://wa.link/n2f5ax"
+              class="text-base font-semibold ml-1 text-white bg-primary py-3 px-8 rounded-md shadow-lg shadow-cyan-500 hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+              >Hubungi Saya</a
+            >
+          </div>
+          <div class="w-full self-end px-4 lg:-mt-8 lg:w-1/2">
+            <div class="relative mt-2 +scale-50 lg:mt-3 lg:right-0">
+              <img
+                src="dist/img/galuh otot.png"
+                alt="Galuh"
+                class="max-w-full mx-auto"
+              />
+              <span
+                class="absolute scale-75 -bottom-40 -z-10 left-1/2 -translate-x-1/2 md:scale-110 lg:-bottom-20"
+              >
+                <svg
+                  width="660"
+                  height="660"
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="#0EA5E9"
+                    d="M34.1,-47.6C43.1,-40.4,48.7,-29,53.1,-16.9C57.5,-4.8,60.8,8,60.4,22.9C60.1,37.8,56,54.7,45.4,60.8C34.7,66.9,17.3,62.3,3.2,57.9C-11,53.5,-22,49.4,-33.1,43.4C-44.2,37.5,-55.4,29.6,-58.7,19.1C-62.1,8.7,-57.5,-4.2,-52,-15.5C-46.4,-26.8,-40,-36.5,-31.2,-43.7C-22.3,-51,-11.2,-55.8,0.7,-56.7C12.5,-57.6,25.1,-54.7,34.1,-47.6Z"
+                    transform="translate(100 100) scale(1)"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Sectio End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="pt-36 pb-32">
+      <div class="container">
+        <div class="flex flex-wrap mb-28">
+          <div class="w-full px-4 mb-10 lg:w-1/2">
+            <h4 class="font-bold uppercase text-primary textt-lg mb-3">
+              Tentang Saya
+            </h4>
+            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">
+              Yuk, Kenalan sama aku!
+            </h2>
+            <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
+              Aku dari SMK Brantas Karangkates, sekarang aku lagi PKL di
+              PT.Universal Big Data, tujuan utamaku untuk sekarang adalah
+              menghafal Yasin, tujuanku yang lain yaitu mencari pengalaman,
+              menambah teman dan relasi.
+            </p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h3
+              class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10"
+            >
+              Lebih dekat sama aku yuk!
+            </h3>
+            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
+              Kalian pasti sering melihat sosmed bukan? jadi tidak ada salahnya
+              untuk kita saling follow, siapa tau kita punya kepentingan yang
+              sama dan bisa bekerja sama🥳
+            </p>
+            <div class="flex items-center">
+              <!-- Youtube -->
+              <a
+                href="https://www.tiktok.com/@shinnra_?_t=ZS-8swIuGo2Ke2&_r=1"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                ><svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>TikTok</title>
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/2.shinnra?igsh=b3I0NGF2ZnVtbG43"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                ><svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Portofolio section Start -->
+    <section id="portofolio" class="pt-36 pb-16 bg-slate-100">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-12">
+            <!-- Perbaiki 'text-tengah' menjadi 'text-center' -->
+            <h4 class="font-semibold text-lg text-primary mb-2">Portofolio</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4">Projek Terkini</h2>
+            <p class="font-medium text-md text-secondary">
+              Ini adalah halaman yang dimana berisi projek terbaruku, silahkan
+              dilihat lihat.
+            </p>
+          </div>
+        </div>
+
+        <!-- Wrapper untuk Item -->
+        <div class="w-full px-4 flex flex-wrap justify-center">
+          <!-- Item Portofolio -->
+          <div class="mb-2 p-4 md:w-1/3">
+            <div class="rounded-none">
+              <img
+                class="gambar shadow-md overflow-hidden"
+                src="dist/img/porto/Cuplikan layar 2025-01-07 105708.png"
+                alt="hai"
+                width="w-full"
+              />
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-1">
+              Fast Scan Design
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Aku membuat design untuk aplikasi scan, menggambarkan betapa
+              cepatnya Fast Scan
+            </p>
+          </div>
+
+          <!-- Item Portofolio -->
+          <div class="mb-2 p-4 md:w-1/3">
+            <div class="rounded-none">
+              <img
+                class="gambar shadow-md overflow-hidden +scale-75"
+                src="dist/img/porto/shintop.png"
+                alt="hai"
+                width="w-full"
+              />
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-8 mb-1">
+              Shintop Design
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Design yang Aku buat untuk website topup game online, meyakinkan
+              pelanggan dengan keamanan dan kecepatan respon
+            </p>
+          </div>
+          <div class="mb-2 p-4 md:w-1/3">
+            <div class="rounded-none">
+              <img
+                class="gambar shadow-md overflow-hidden"
+                src="dist/img/porto/ecen.png"
+                alt="hai"
+                width="w-full"
+              />
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-1">
+              Ecentio Design
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Aku membuat design dari botol minumku yang bermerek ecentio, botol
+              yang sudah menemaniku selama praktek kerja lapangan
+            </p>
+          </div>
+          <div class="mb-2 p-4 md:w-1/3">
+            <div class="rounded-none">
+              <img
+                class="gambar shadow-md overflow-hidden"
+                src="dist/img/porto/1web saya.png"
+                alt="hai"
+                width="w-full"
+              />
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-1">
+              Website HTML & CSS & JS
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Website Pertama yang aku buat, menggunakan bahasa HTML CSS dengan
+              sedikit tambahan dari JavaScript
+            </p>
+          </div>
+          <div class="mb-2 p-4 md:w-1/3">
+            <div class="rounded-none">
+              <img
+                class="gambar shadow-md overflow-hidden"
+                src="dist/img/porto/webreact.png"
+                alt="hai"
+                width="w-full"
+              />
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-1">
+              Website ReactJs
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Website Kedua yang aku buat, aku menggunakan ReactJs untuk
+              membuatnya
+            </p>
+          </div>
+          <div class="mb-2 p-4 md:w-1/3">
+            <div class="rounded-none">
+              <img
+                class="gambar shadow-md overflow-hidden"
+                src="dist/img/porto/webusbsd.png
+                    "
+                alt="hai"
+                width="w-full"
+              />
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-1">
+              Website HTML & Boostrap + CSS
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Website yang menurut aku simpel namun rapi karena Boostrap yang
+              punya fitur seperti template
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portofolio section End -->
+
+    <!-- Client section Start -->
+    <section id="ubig" class="pt-36 pb-32 bg-slate-700">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-12">
+            <!-- Perbaiki 'text-tengah' menjadi 'text-center' -->
+            <h4 class="font-semibold text-lg text-primary mb-2">Ubig Momen</h4>
+            <h2 class="font-bold text-white text-3xl mb-4">
+              Kegiatan Random Saat Di Ubig
+            </h2>
+            <!-- <p class="font-medium text-md text-secondary">
+              Momen Selama di UBIG bersama teman teman.
+            </p> -->
+          </div>
+        </div>
+
+        <div class="w-full px-4">
+          <div class="flex flex-wrap items-center justify-center">
+            <a
+              href="#"
+              class="max-w-[400px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+            >
+              <img src="dist/img/bakar bakar1.jpg" alt="bakar" />
+              <span
+                class="absolute inset-0 mt-16 flex items-center justify-center bg-black bg-opacity-0 text-white text-lg font-bold transition duration-500 opacity-100 hover:opacity-0"
+              >
+                Bakar bakar sebelum lulus
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="max-w-[400px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+            >
+              <img src="dist/img/futsal.jpg" alt="bakar" />
+              <span
+                class="absolute inset-0 mt-16 flex items-center justify-center bg-black bg-opacity-0 text-white text-lg font-bold transition duration-500 opacity-100 hover:opacity-0"
+              >
+                Futsal bersama ubig
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="max-w-[400px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+            >
+              <img src="dist/img/lulus des.jpg" alt="bakar" />
+              <span
+                class="absolute inset-0 mt-16 flex items-center justify-center bg-black bg-opacity-0 text-white text-lg font-bold transition duration-500 opacity-100 hover:opacity-0"
+              >
+                Abangku lulus 1
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="max-w-[400px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+            >
+              <img src="dist/img/5.jpg" alt="bakar" />
+              <span
+                class="absolute inset-0 mt-16 flex items-center justify-center bg-black bg-opacity-0 text-white text-lg font-bold transition duration-500 opacity-100 hover:opacity-0"
+              >
+                Fotbar tim Tad dan mas lukman
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="max-w-[400px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+            >
+              <img src="dist/img/nyantai.jpg" alt="bakar" />
+              <span
+                class="absolute inset-0 mt-16 flex items-center justify-center bg-black bg-opacity-0 text-white text-lg font-bold transition duration-500 opacity-100 hover:opacity-0"
+              >
+                Istirahat siang di kos
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="max-w-[400px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+            >
+              <img src="dist/img/paralayang.jpg" alt="bakar" />
+              <span
+                class="absolute inset-0 mt-20 flex items-center justify-center bg-black bg-opacity-0 text-white text-lg font-bold transition duration-500 opacity-100 hover:opacity-0"
+              >
+                Paralayang
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="max-w-[400px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+            >
+              <img src="dist/img/pisza.jpg" alt="bakar" />
+              <span
+                class="absolute inset-0 mt-20 flex items-center justify-center bg-black bg-opacity-0 text-white text-lg font-bold transition duration-500 opacity-100 hover:opacity-0"
+              >
+                Makan pizza pemberian pak Kholis
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Client section End -->
+
+<!-- Contact Section Start -->
+<section id="contact" class="pt-36 pb-32">
+    <div class="container">
+      <div class="w-full px-4">
+        <div class="max-w-xl mx-auto text-center mb-12">
+          <h2 class="font-bold text-dark text-3xl mb-4">Hubungi saya</h2>
+          <p class="font-medium text-md text-secondary md:text-lg">
+            Saya akan selalu menunggu pesan dari anda.
+          </p>
+        </div>
+      </div>
+  
+      <form
+        action="https://formspree.io/f/mldeavew"
+        method="POST"
+        class="w-full max-w-lg mx-auto"
+      >
+        <!-- Nama -->
+        <div class="mb-8">
+          <label for="name" class="text-base font-bold text-primary">Nama</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+            placeholder="Masukkan nama Anda"
+            required
+          />
+        </div>
+  
+        <!-- Email -->
+        <div class="mb-8">
+          <label for="email" class="text-base font-bold text-primary">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+            placeholder="Masukkan email Anda"
+            required
+          />
+        </div>
+  
+        <!-- Pesan -->
+        <div class="mb-8">
+          <label for="message" class="text-base font-bold text-primary">Pesan</label>
+          <textarea
+            id="message"
+            name="message"
+            class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-28"
+            placeholder="Tulis pesan Anda"
+            required
+          ></textarea>
+        </div>
+  
+        <!-- Tombol Kirim -->
+        <div class="text-center">
+          <button
+            type="submit"
+            class="text-base font-semibold shadow-sm s text-white bg-primary py-3 px-8 rounded-md hover:bg-white hover:text-primary hover:opacity-90 hover:shadow-lg hover:shadow-teal-300 transition duration-500"
+          >
+            Kirim
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- Contact Section End -->
+  
+    <!-- footer start -->
+    <footer class="bg-dark pt-24 pb-12">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div
+            class="w-full -mt-10 px-4 mb-12 text-slate-300 font-medium md:h-1/3"
+          >
+            <h2 class="font-bold text-4xl text-white mb-12 -ml-1">GALUH SAPUTRA</h2>
+            <h3 class="font-semibold text-xl text-white mb-2">Hubungi Saya</h3>
+            <p>galuhputrana576@gmail.com</p>
+            <p>Jl.Kembar Olak-Alen</p>
+            <p>Blitar</p>
+          </div>
+          <div class="w-full px-4 mb-12 md:1/3">
+            <h3 class="font-semibold text-xl text-white mb-2">Hobi Saya</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a
+                  href="#"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Bermain Game</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Mendesain</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Mengoding</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Bulu Tangkis</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full px-4 mb-12 md:1/3">
+            <h3 class="font-semibold text-xl text-white mb-2">Tautan</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a
+                  href="#home"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Tentang saya</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portofolio"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Portofolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#ubig"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Ubig Momen</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Hubungi Saya</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full pt-10 border-t border-slate-700">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Youtube -->
+            <a
+              href="https://www.tiktok.com/@shinnra_?_t=ZS-8swIuGo2Ke2&_r=1"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              ><svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>TikTok</title>
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/2.shinnra?igsh=b3I0NGF2ZnVtbG43"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              ><svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Instagram</title>
+                <path
+                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                />
+              </svg>
+            </a>
+          </div>
+          <p class="font-medium text-sm text-slate-500 text-center">Dibuat oleh <a href="https://www.instagram.com/2.shinnra?igsh=b3I0NGF2ZnVtbG43" class="text-base text-white hover:text-primary transition duration-500">2.shinnra</a> menggunakan tailwind CSS</p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
